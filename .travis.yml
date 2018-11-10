@@ -1,10 +1,14 @@
-language: generic
+language: node_js
+node_js:
+  - "8"
+
 env:
   global:
   
-before_install: 
 install: 
+  - npm install -g @angular/cli@7.0.4
 script: 
+  - ng build --prod
 branches:
   only:
   - master
