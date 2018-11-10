@@ -1,0 +1,15 @@
+language: generic
+env:
+  global:
+  
+before_install: 
+install: 
+script: 
+branches:
+  only:
+  - master
+  - "/^v.*$/"
+deploy:
+  provider: firebase
+  token:
+    secure: acVoAHjSezkVCQmXfZ4KhGjkhTmpzuLVSvuHxJzwlo2aV2fiTIZA9HKGRzN2o9SM6uqPtEjVvklotT6tuIgVTEfJiKPhNaDiYJse5azgfltNqJyJnsmnxEWD5B2jZ66PvInaf+GYkTNPKaNHhpmN6yGCEzJDu7f5I1kFq+xM3CH4VnnD8RWp+0fa1MhqgpwhXNRWjyfgc4jIEHNp7X4Rs16Q+RhfzejQOxFpHJTBhooKSXvgn+rTH7MiTowANjSnMSlXniuaL4TIXVgSvmbggLyTA30WqJ45gvPgGUumTObLig/PGkmR8HMBFSvNqnqSp7detZlrrCnGLi44Bs0ON/keMgbZRRr4vQpyIWW9S/ybwcBPt6OeIzJnB4PxLlVtLMkifCVHog7u5pqrtAN3dPrF/oW4gygCvQJRf0+Tga7eDMttJAcfjTJkHFlX9pqwAiCkfCJNKw8KxT214IVEZ+9v/uM7hiFBw5YIiXjaVTkEUp1mnCLhllf9hRkwldXVKYB5o1QP242NVmQw1J6tSTjVLA+K+fO/2oh7kImHuoCOyk13go+k14bOEpLVt3Je8f+8ldgLtNUGgNBBl1RefrZvMXfZ3LtGKsIUTYiVoMOT7k4du+fq0d4IsxxQEr3E/zKfYakQecnPT4AgSbjMebrXlnCJPOuovFvZ0S5u8Ck=
