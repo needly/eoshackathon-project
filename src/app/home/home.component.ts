@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  public projects: Observable<any[]>;
+  public projects: {}[];
 
   constructor(
     private db: AngularFireDatabase
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.db.list('projects').valueChanges()
     .subscribe((project) => {
-      console.log(project);
+      this.projects = project;
     });
   }
 
