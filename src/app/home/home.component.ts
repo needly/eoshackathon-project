@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ehp-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public projects: Observable<any[]>;
+
+  constructor(
+    private db: AngularFireDatabase
+  ) { }
 
   ngOnInit() {
+    this.db.list('projects').valueChanges()
+    .subscribe((project) => {
+      console.log(project);
+    });
   }
 
 }
