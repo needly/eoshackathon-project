@@ -6,7 +6,8 @@ env:
   global:
   
 install: 
-  - npm install -g @angular/cli@7.0.4
+  - yarn global add @angular/cli@7.0.4
+  - yarn install
 script: 
   - ng build --prod
 branches:
