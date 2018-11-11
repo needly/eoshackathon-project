@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
 import {
   ActivatedRoute,
   ParamMap,
@@ -6,6 +7,8 @@ import {
   NavigationEnd
 } from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'eosjs';
+import { TextDecoder, TextEncoder } from 'text-encoding';
 
 @Component({
   selector: 'ehp-project',
@@ -15,6 +18,8 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class ProjectComponent implements OnInit {
   public project: any;
   public rolesArray: any[] = [];
+  private eosjsApi: any;
+  private teams: any[] = [];
 
   constructor(private route: ActivatedRoute, private db: AngularFireDatabase) {}
 
@@ -23,6 +28,16 @@ export class ProjectComponent implements OnInit {
       if (params['id']) {
         this.getProject(params['id']);
       }
+    });
+
+    const defaultPrivateKey = '5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr'; // useraaaaaaaa
+    const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
+    const rpc = new JsonRpc('http://127.0.0.1:8000', { fetch });
+    this.eosjsApi = new Api({
+      rpc,
+      signatureProvider,
+      textDecoder: new TextDecoder(),
+      textEncoder: new TextEncoder()
     });
   }
 
@@ -33,6 +48,7 @@ export class ProjectComponent implements OnInit {
       .subscribe(proj => {
         this.project = proj;
         this.parseRoles();
+        this.getMembers();
       });
   }
 
@@ -48,5 +64,19 @@ export class ProjectComponent implements OnInit {
         this.rolesArray.push(role);
       }
     });
+  }
+
+  getMembers = () => {
+    Object.keys(this.project.members).forEach((val) => {
+      this.db
+        .object(`/userProfiles/${val}`)
+        .valueChanges()
+        .pipe(take(1))
+        .subscribe(user => {
+          this.teams.push(user);
+        });
+    });
+
+    console.log(this.teams);
   }
 }
