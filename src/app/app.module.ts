@@ -13,6 +13,9 @@ import { ProfileModule } from './profile/profile.module';
 import { ProjectModule } from './project/project.module';
 import { ApplyModule } from './apply/apply.module';
 import { ApplicationsModule } from './applications/applications.module';
+import { MyProjectsModule } from './my-projects/my-projects.module';
+import { NewProjectModule } from './new-project/new-project.module';
+
 
 import { HeaderService } from './global/header/header.service';
 
@@ -21,7 +24,7 @@ import { HeaderService } from './global/header/header.service';
     AppComponent
   ],
   imports: [
-    RouterModule
+    RouterModule,
     HeaderModule,
     BrowserModule,
     AppRoutingModule,
@@ -30,8 +33,10 @@ import { HeaderService } from './global/header/header.service';
     ProjectModule,
     ApplyModule,
     ApplicationsModule,
+    MyProjectsModule,
+    NewProjectModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
   ],
   providers: [
     HeaderService
