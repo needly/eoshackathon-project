@@ -6,3 +6,13 @@
 body {
   font-family: 'Open Sans';
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,9 +1,24 @@
-<section>
-  <div class="explore">Explore</div>
-  <div class="projects">
-    <div class="project-item" *ngFor="let project of projects">
-      {{ project.name }}
-      {{ project.description }}
+<section class="flex-column">
+  <div class="container">
+    <div class="explore">Explore</div>
+    <div class="projects flex-column">
+      <article class="media project-item" *ngFor="let project of projects">
+        <figure class="media-left">
+          <p class="image">
+            <img [src]="project.avatarUrl">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <div class="project-name">{{ project.name }}</div>
+            <div class="project-desc">{{ project.description }}</div>
+          </div>
+        </div>
+        <div class="media-right flex-column">
+          <span><strong>3,400</strong> out of 5,000 EOS</span>
+          <progress class="progress is-link is-small" value="60" max="100">60%</progress>
+        </div>
+      </article>
     </div>
   </div>
 </section>

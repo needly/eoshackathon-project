@@ -1,11 +1,16 @@
 
 section {
   background-color: #FCFCFC;
-  max-width: 1180px;
-  
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+
+  .container {
+    max-width: 1180px;
+    min-width: 1180px;
+  }
+
   .projects {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -15,12 +20,70 @@ section {
     color: #181E37;
     letter-spacing: 0;
     text-align: left;
+    max-width: 1180px;
     margin: 48px 0px 48px 0px;
+  }
+
+  .media + .media {
+    border-top: 0px;
+    margin-top: 10px;
   }
 
   .project-item {
     background-color: white;
     background: #FFFFFF;
+    max-width: 1180px;
+    width: 1180px;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.05);
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    padding: 25px 30px 25px 30px;
+    cursor: pointer;
+
+    .image {
+      max-width: 50px;
+      max-height: 50px;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+
+    .media-right {
+      width: 230px;
+
+      span {
+        font-size: 14px;
+        color: #747887;
+        letter-spacing: 0;
+        margin-bottom: 12px;
+      }
+      strong {
+        font-size: 18px;
+      }
+    }
+    .project-name {
+      font-weight: 600;
+      font-size: 18px;
+      color: #181E37;
+      letter-spacing: 0;
+      margin-bottom: 5px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: #747887;
+      letter-spacing: 0;
+      line-height: 19.6px;
+      white-space: nowrap;
+      max-width: 720px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .is-small {
+      height: 8px;
+    }
   }
 }
