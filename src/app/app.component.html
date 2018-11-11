@@ -1,2 +1,11 @@
 <ehp-header></ehp-header>
-<router-outlet></router-outlet>
+
+<div 
+    class="body-wrapper"
+    [ngClass]="{ 
+        'is-header-shrunk': headerService.isShrunk,
+        'is-subpage': headerService.isSubpage 
+    }"
+>
+    <router-outlet></router-outlet>
+</div>

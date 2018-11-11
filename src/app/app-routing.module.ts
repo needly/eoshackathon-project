@@ -8,14 +8,19 @@ import { ApplicationsComponent } from './applications/applications.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:user', component: ProfileComponent },
+  { path: 'my-projects/:user', component: ProjectComponent }
   { path: 'project/:id', component: ProjectComponent },
   { path: 'apply', component: ApplyComponent },
   { path: 'applications', component: ApplicationsComponent }
+  { path: 'login', component: ApplicationsComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(
+      routes,
+      { enableTracing: true }
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

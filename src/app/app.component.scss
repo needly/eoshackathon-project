@@ -1,0 +1,9 @@
+.body-wrapper {
+    padding-top: 279px;
+    transition: 0.4s;
+
+    &.is-header-shrunk,
+    &.is-subpage {
+        padding-top: 70px;
+    }
+}

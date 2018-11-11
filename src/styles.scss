@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import '../node_modules/bulma-scss/bulma.scss';
+@import 'variables.scss';
 
 body {
   font-family: 'Open Sans';

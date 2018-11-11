@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,11 +14,14 @@ import { ProjectModule } from './project/project.module';
 import { ApplyModule } from './apply/apply.module';
 import { ApplicationsModule } from './applications/applications.module';
 
+import { HeaderService } from './global/header/header.service';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    RouterModule
     HeaderModule,
     BrowserModule,
     AppRoutingModule,
@@ -27,9 +31,11 @@ import { ApplicationsModule } from './applications/applications.module';
     ApplyModule,
     ApplicationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [
+    HeaderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

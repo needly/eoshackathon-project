@@ -1,0 +1,58 @@
+@import '../../../variables.scss';
+
+.navbar {
+    background-color: $primary-background;
+    height: 279px;
+    transition: 0.4s;
+
+    &.is-shrunk,
+    &.is-subpage {
+        height: 70px;
+    }
+}
+
+.logo {
+    color: $primary-color;
+    font-size: 27px;
+    font-weight: 300;
+
+    b {
+        color: $secondary-foreground
+    }
+}
+
+.navbar.is-shrunk .second-level,
+.navbar.is-subpage .second-level {
+    display:none;
+}
+
+.search-bar {
+    width: 580px;
+    height: 47px;
+}
+
+
+
+.search-bar input,
+.search-bar .button {
+    height:47px !important; 
+}
+
+.is-tall {
+    height: 210px;
+}
+
+.main-menu {
+    margin-top: 10px;
+}
+
+.main-menu .navbar-item {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main-menu .menu-profile {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
