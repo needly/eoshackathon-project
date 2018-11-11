@@ -15,7 +15,7 @@
 
                     <div class="navbar-brand">
                         <a class="navbar-item logo" routerLink="/">
-                            <b>EOS</b> HIVE
+                            <b>EOS</b>&nbsp;HIVE
                         </a>
                     </div>
 
@@ -24,11 +24,26 @@
                     
                     <div class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item" routerLink="/" routerLinkActive="active">Explore</a>
+                            <a 
+                                class="navbar-item" 
+                                routerLink="/" 
+                                routerLinkActive="is-active"
+                                [routerLinkActiveOptions]="{exact: true}"
+                            >Explore</a>
 
-                            <a class="navbar-item" routerLink="/my-projects/1" routerLinkActive="active">My Projects</a>
+                            <a 
+                                class="navbar-item" 
+                                routerLink="/my-projects/1" 
+                                routerLinkActive="is-active"
+                                [routerLinkActiveOptions]="{exact: true}"
+                            >My Projects</a>
 
-                            <a class="menu-profile" routerLink="/profile/1"  routerLinkActive="active">
+                            <a 
+                                class="menu-profile" 
+                                routerLink="/profile/1"  
+                                routerLinkActive="is-active"
+                                [routerLinkActiveOptions]="{exact: true}"
+                            >
                                 <figure class="image is-48x48">
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/48x48.png">
                                 </figure>
