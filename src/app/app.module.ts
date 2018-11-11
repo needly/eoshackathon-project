@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { HeaderModule } from './global/header/header.module';
 import { ProfileModule } from './profile/profile.module';
 import { ProjectModule } from './project/project.module';
 import { ApplyModule } from './apply/apply.module';
@@ -17,6 +18,7 @@ import { ApplicationsModule } from './applications/applications.module';
     AppComponent
   ],
   imports: [
+    HeaderModule,
     BrowserModule,
     AppRoutingModule,
     HomeModule,
@@ -25,7 +27,7 @@ import { ApplicationsModule } from './applications/applications.module';
     ApplyModule,
     ApplicationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
