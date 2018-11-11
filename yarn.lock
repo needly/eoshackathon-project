@@ -1424,6 +1424,11 @@ builtins@^1.0.3:
   version "0.0.0"
   resolved "https://github.com/j1mc/bulma-scss#234cd3da3b96b5aa45877212c2338d6e98ed1d92"
 
+bulma-steps@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/bulma-steps/-/bulma-steps-2.2.1.tgz#39cc353ae049701c60aa7c74a27bf56b8463cb1a"
+  integrity sha512-fD50xz49zPVAfsRNcwBR7rd1lgNdKrcsIXAfVMwMH9A6iDhauOTkiEJOxXj4xZuW/CI6JpV+fCgj5uIuN1lP3Q==
+
 bytebuffer@^5.0.1, bytebuffer@~5:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/bytebuffer/-/bytebuffer-5.0.1.tgz#582eea4b1a873b6d020a48d58df85f0bba6cfddd"

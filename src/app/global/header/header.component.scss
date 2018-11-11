@@ -5,6 +5,23 @@
     height: 279px;
     transition: 0.4s;
 
+    &::after {
+        content: "";
+        background: {
+            image: url('../../../assets/images/squiggly.png');
+            position: 0 0;
+            repeat: no-repeat;
+            size: cover;
+        }
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    }
+
     &.is-shrunk,
     &.is-subpage {
         height: 70px;

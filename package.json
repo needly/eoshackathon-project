@@ -23,6 +23,7 @@
     "@angular/router": "~7.0.0",
     "angularfire2": "^5.1.0",
     "bulma-scss": "https://github.com/j1mc/bulma-scss",
+    "bulma-steps": "^2.2.1",
     "core-js": "^2.5.4",
     "eosjs": "^20.0.0-beta2",
     "firebase": "^5.5.8",
