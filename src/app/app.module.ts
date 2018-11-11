@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { HeaderModule } from './global/header/header.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
     HomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
