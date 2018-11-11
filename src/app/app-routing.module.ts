@@ -12,7 +12,16 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'profile/:user', component: ProfileComponent },
   { path: 'my-projects/:user', component: MyProjectsComponent },
-  { path: 'new-project', component: NewProjectComponent },
+
+  { path: 'new-project', component: NewProjectComponent,
+    children: [
+      { path: '', redirectTo: 'step-one', pathMatch: 'full' },
+      { path: 'step-one', component: NewProjectComponent },
+      { path: 'step-two', component: NewProjectComponent },
+      { path: 'step-three', component: NewProjectComponent },
+    ]
+  },
+
   { path: 'project/:id', component: ProjectComponent },
   { path: 'apply', component: ApplyComponent },
   { path: 'applications', component: ApplicationsComponent },
@@ -22,7 +31,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(
       routes,
-      { enableTracing: true }
+      { enableTracing: false }
   )],
   exports: [RouterModule]
 })
