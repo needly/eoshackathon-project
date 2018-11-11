@@ -8,10 +8,10 @@ import { ApplicationsComponent } from './applications/applications.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/profile', component: ProfileComponent },
-  { path: '/project', component: ProjectComponent },
-  { path: '/apply', component: ApplyComponent },
-  { path: '/applications', component: ApplicationsComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'project', component: ProjectComponent },
+  { path: 'apply', component: ApplyComponent },
+  { path: 'applications', component: ApplicationsComponent }
 ];
 
 @NgModule({
