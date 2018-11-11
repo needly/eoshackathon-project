@@ -12,7 +12,6 @@ script:
   - ng build --prod
 branches:
   only:
-  - master
   - "/^v.*$/"
 deploy:
   provider: firebase
