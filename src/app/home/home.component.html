@@ -2,7 +2,7 @@
   <div class="container">
     <div class="explore">Explore</div>
     <div class="projects flex-column">
-      <article class="media project-item" *ngFor="let project of projects">
+      <article class="media project-item" *ngFor="let project of projects" (click)="navigateToProject(project)">
         <figure class="media-left">
           <p class="image">
             <img [src]="project.avatarUrl">

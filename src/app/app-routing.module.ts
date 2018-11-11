@@ -9,7 +9,7 @@ import { ApplicationsComponent } from './applications/applications.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'project', component: ProjectComponent },
+  { path: 'project/:id', component: ProjectComponent },
   { path: 'apply', component: ApplyComponent },
   { path: 'applications', component: ApplicationsComponent }
 ];

@@ -1,0 +1,93 @@
+section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #FCFCFC;
+  align-items: center;
+
+  .columns {
+    padding-top: 40px;
+    width: 1180px;
+  }
+
+  .white-box {
+    background: #FFFFFF;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.05);
+    padding: 30px;
+
+    h2 {
+      font-weight: 600;
+      font-size: 18px;
+      color: #181E37;
+      letter-spacing: 0;
+    }
+  }
+
+  .join-proj {
+
+    span {
+      font-size: 18px;
+      color: #747887;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+    }
+    strong {
+      font-size: 22px;
+    }
+
+    hr {
+      margin-top: 10px
+    }
+  }
+  
+  button {
+    height: 46px;
+    width: 100%;
+  }
+
+  .join-btn {
+    background: #6D6DEC;
+    text-decoration: uppercase;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 0px;
+  }
+
+  .team {
+    margin-top: 20px;
+  }
+
+  .follow-btn {
+    margin-top: 10px;
+    border: 2px solid #6D6DEC;
+    background: white;
+    color: #6D6DEC;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .team {
+    
+  }
+
+  .roles {
+    margin-top: 20px;
+  }
+
+  .desc-box {
+    font-size: 14px;
+    color: #747887;
+    letter-spacing: 0;
+    line-height: 19.6px;
+
+    h3 {
+      font-size: 24px;
+      color: #181E37;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+    }
+    
+  }
+}

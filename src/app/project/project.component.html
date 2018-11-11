@@ -1,3 +1,27 @@
-<p>
-  project works!
-</p>
+<section class="flex-column">
+  <div class="columns">
+    <div class="column is-two-thirds">
+      <div class="desc-box white-box">
+        <h3>{{ project.name }}</h3>
+        {{ project.description }}
+      </div>
+      <div class="team white-box">
+        <h2>Current Team</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="white-box join-proj flex-column">
+        <span><strong>3,400</strong> out of 5,000 EOS</span>
+        <progress class="progress is-link is-small" value="60" max="100">60%</progress>
+        <hr>
+        <button class="join-btn">JOIN PROJECT</button>
+        <button class="follow-btn">FOLLOW</button>
+      </div>
+      <div class="roles white-box">
+        <h2>Roles Needed</h2>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>
