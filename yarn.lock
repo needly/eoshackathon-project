@@ -1420,10 +1420,9 @@ builtins@^1.0.3:
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
 
-bulma@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
-  integrity sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==
+"bulma-scss@https://github.com/j1mc/bulma-scss":
+  version "0.0.0"
+  resolved "https://github.com/j1mc/bulma-scss#234cd3da3b96b5aa45877212c2338d6e98ed1d92"
 
 bytebuffer@^5.0.1, bytebuffer@~5:
   version "5.0.1"

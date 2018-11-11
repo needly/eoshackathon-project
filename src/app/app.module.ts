@@ -18,6 +18,7 @@ import { ApplicationsModule } from './applications/applications.module';
     AppComponent
   ],
   imports: [
+    HeaderModule,
     BrowserModule,
     AppRoutingModule,
     HomeModule,
@@ -26,8 +27,7 @@ import { ApplicationsModule } from './applications/applications.module';
     ApplyModule,
     ApplicationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    HeaderModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
