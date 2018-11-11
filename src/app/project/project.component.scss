@@ -22,6 +22,44 @@ section {
     }
   }
 
+  .role-wrapper + .role-wrapper {
+    margin-top: 15px;
+  }
+
+  .role {
+    justify-content: space-between;
+    height: 60px;
+    width: 310px;
+    border: 1px solid #E7E8EB;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 6px;
+    align-items: center;
+
+    .name {
+      font-weight: 600;
+      font-size: 18px;
+      color: #181E37;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      align-items: center;
+      
+      img {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+      }
+    }
+
+    .percentage {
+      font-weight: 600;
+      font-size: 18px;
+      color: #6D6DEC;
+      letter-spacing: 0;
+      text-align: right;
+    }
+  }
+
   .join-proj {
 
     span {

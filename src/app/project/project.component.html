@@ -21,6 +21,11 @@
       <div class="roles white-box">
         <h2>Roles Needed</h2>
         <hr>
+        <div *ngFor="let role of rolesArray" class="role-wrapper">
+          <div class="role flex-row">
+            <div class="name flex-row"><img [src]="role.image"> {{ role.name }}</div> <div class="percentage">{{ role.percentage }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

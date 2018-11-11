@@ -21,7 +21,7 @@ import { HeaderService } from './global/header/header.service';
     AppComponent
   ],
   imports: [
-    RouterModule
+    RouterModule,
     HeaderModule,
     BrowserModule,
     AppRoutingModule,

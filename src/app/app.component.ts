@@ -13,7 +13,7 @@ export class AppComponent {
 
     constructor(
         private zone: NgZone,
-        private router: Router
+        private router: Router,
         public headerService: HeaderService
     ) {
         this.router.events.subscribe((val) => {
