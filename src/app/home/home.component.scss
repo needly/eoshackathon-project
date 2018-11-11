@@ -1,13 +1,25 @@
 
 section {
   background-color: #FCFCFC;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1180px;
+  
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .explore {
+    font-size: 24px;
+    color: #181E37;
+    letter-spacing: 0;
+    text-align: left;
+    margin: 48px 0px 48px 0px;
+  }
 
   .project-item {
     background-color: white;
-    max-width: 1180px;
     background: #FFFFFF;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.05);
   }
